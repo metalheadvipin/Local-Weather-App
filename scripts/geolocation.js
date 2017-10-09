@@ -3,12 +3,10 @@
       if(navigator.geolocation){
 
             navigator.geolocation.getCurrentPosition(function(position){
-
-                var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
-                document.getElementById("result").innerHTML = positionInfo;         
+       
                 var coords = "";
                 coords += 'lat=' + position.coords.latitude + '&lon=' + position.coords.longitude; 
-                console.log(coords + 'firsr');          
+                    
                 var url = 'https://fcc-weather-api.glitch.me/api/current?';
                  url += coords;
 
@@ -16,10 +14,10 @@
             console.log(data);  
             
             
-            var result = $('#result');
-            result.append('<p>Temperature: ' + data.main.temp + '&#8451;');
-            result +=  'Humidity: ' + data.main.humidity + '&#x25;</p>';
-
+            
+            var resultString = '<p>Temperature: ' + data.main.temp + '&#8451;</p>';
+            resultString +=  '<p>Humidity: ' + data.main.humidity + '&#x25;</p>';
+            $('#result').append(resultString);
             
             });//getJSON
                });
