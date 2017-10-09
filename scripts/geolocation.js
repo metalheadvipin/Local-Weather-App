@@ -14,12 +14,13 @@
 
         $.getJSON(url, function(data){
             console.log(data);  
-            console.log(data.main.temp);  
-            console.log(data.main.humidity);
-            console.log(data.weather.icon);
+            
+            
+            var result = $('#result');
+            result.append('<p>Temperature: ' + data.main.temp + '&#8451;');
+            result +=  'Humidity: ' + data.main.humidity + '&#x25;</p>';
 
-              var $result = $("#result");
-              $result += "<p> The weather is " + data.main.temp + '&#176; </p>';
+            
             });//getJSON
                });
 
