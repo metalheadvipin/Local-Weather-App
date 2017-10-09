@@ -13,12 +13,24 @@
         $.getJSON(url, function(data){
             console.log(data);  
             
+            var tempinC = Math.round(data.main.temp); 
+            var tempinF = Math.round(tempinC * 9/5 + 32);
+            console.log(tempinF);
             
+            var resultString = '<h1>' + data.name + ',' + data.sys.country + '</h1>' + '<img src="' + data.weather[0].icon + '">';
+            resultString += '<h2 class="desc">' + data.weather[0].description + '</h2>';
+            resultString += '<h2>Temperature: ' + tempinC + '&#8451;</h2>';
+            resultString +=  '<h2>Humidity: ' + data.main.humidity + '&#x25;</h2>';
+           
             
-            var resultString = '<p>Temperature: ' + data.main.temp + '&#8451;</p>';
-            resultString +=  '<p>Humidity: ' + data.main.humidity + '&#x25;</p>';
             $('#result').append(resultString);
+
+
             
+			$('#tempUnit').click(function(){
+ 			
+				}); // temp button
+	            
             });//getJSON
                });
 
