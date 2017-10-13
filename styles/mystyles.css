@@ -4,3 +4,13 @@
     text-transform:capitalize;
 }
 
+#tempUnit {
+	
+}
+
+.hidden{
+	display: none;
+}
+.display {
+	display: block;
+}
