@@ -14,3 +14,13 @@
 .display {
 	display: block;
 }
+
+#container{
+	width:500px;
+	margin: auto;
+	margin-top: 50px;
+}
+#result {
+	display: inline;	
+	width: 50%;
+}
