@@ -16,9 +16,9 @@
 }
 
 #container{
-	width:500px;
+	width:300px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 100px;
 }
 #result {
 	display: inline;	

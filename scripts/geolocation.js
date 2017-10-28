@@ -8,6 +8,7 @@
                  
 
         $.getJSON(url, function(data){ 
+        	console.log(data);
             var tempinC = Math.round(data.main.temp); 
             var tempinF = Math.round(tempinC * 9/5 + 32);
 
