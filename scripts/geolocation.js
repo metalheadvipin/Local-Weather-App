@@ -37,7 +37,7 @@
           			  
 				}); // temp unit button
           
-	            
+	             $('#loading').hide();
             });//getJSON
          });
 
